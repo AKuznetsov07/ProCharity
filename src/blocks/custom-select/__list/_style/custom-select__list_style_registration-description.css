@@ -1,0 +1,12 @@
+.custom-select__list_style_registration-description {
+  max-width: 736px;
+  max-height: 296px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 900px) {
+  .custom-select__list_style_registration-description {
+    max-width: 100%;
+    max-height: max-content;
+  }
+}
