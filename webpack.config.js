@@ -136,8 +136,8 @@ module.exports = {
             inject: 'body'
         }),
         new HtmlWebpackPlugin({
-            filename: 'account-password.html',
-            template: './src/account-password.html',
+            filename: 'account-access.html',
+            template: './src/account-access.html',
             inject: 'body'
         }),
         new CleanWebpackPlugin(),
