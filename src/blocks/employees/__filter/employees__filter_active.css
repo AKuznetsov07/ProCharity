@@ -1,0 +1,7 @@
+.employees__filter_active{
+	color: #58646A;
+}
+.employees__filter_active::after{
+	content: url('../../../images/arrow-fill-darkGray.svg');
+	margin-left: 6px;
+}

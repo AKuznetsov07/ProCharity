@@ -1,0 +1,16 @@
+.employees__filter{
+	color: #7B878F;
+	margin: 0;
+	padding: 0;
+}
+
+.employees__filter::after{
+	content: url('../../../images/arrow-fill-gray.svg');
+	margin-left: 6px;
+}
+
+
+
+
+
+

@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta employees__name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="Группа 4">
+  <meta employees__name="author" content="Группа 4">
   <title>ProCharity - Сотрудники</title>
 </head>
 <body class="page">
@@ -88,15 +88,65 @@
     <a href="#" class="sidebar__status sidebar__status_state_process">на модерации</a>
   </section>
   <section class="content">
-
-      <h1 class="heading heading_type_title heading_type_access">Сотрудники</h1>
-      <p class="paragraph">Приглашайте сотрудников, чтобы они могли размещать задания от имени вашей НКО.</p>
-      
-      <ul>
-        
+    <h1 class="heading heading_type_title heading_type_access">Сотрудники</h1>
+    <p class="paragraph">Приглашайте сотрудников, чтобы они могли размещать задания от имени вашей НКО.</p> 
+    <button class="btn btn_style_primary">Добавить</button>
+    <div class="employees">
+      <ul class="employees__list">
+        <li class="employees__grid">
+          <!-- <button></button> -->
+          <p class="employees__name employees__filter employees__filter_active">Фамилия и имя</p>
+          <p class="employees__rights employees__filter">Права</p>
+          <p class="employees__data employees__filter">Дата регистрации</p>
+        </li>
+        <li class="employees__grid">
+          <p class="employees__name">Виноградов Михаил</p>
+          <button class="employees__rights btn employees__btn employees__btn_admin"></button>
+          <p class="employees__data">16.05.2020 14:30</p>
+          <div class="employees__edit">
+            <button class="btn employees__btn employees__btn_edit_info"></button>
+            <button class="btn employees__btn employees__btn_edit_list"></button>
+          </div>
+        </li>    
+        <li class="employees__grid">
+          <p class="employees__name">Новоселова Алевтина</p>
+          <button class="employees__rights btn employees__btn"></button>
+          <p class="employees__data">12.01.2018 11:27</p>
+          <div class="employees__edit">
+            <button class="btn employees__btn employees__btn_edit_info"></button>
+            <button class="btn employees__btn employees__btn_edit_list"></button>
+          </div>
+        </li> 
+        <li class="employees__grid">
+          <p class="employees__name">Щедрина-Вольфембюттельская Мария</p>
+          <button class="employees__rights btn employees__btn employees__btn_admin"></button>
+          <p class="employees__data">28.09.2021 08:04</p>
+          <div class="employees__edit">
+            <button class="btn employees__btn employees__btn_edit_info"></button>
+            <button class="btn employees__btn employees__btn_edit_list"></button>
+          </div>
+        </li>
+        <li class="employees__grid">
+          <p class="employees__name">Яковлев Анатолий</p>
+          <button class="employees__rights btn employees__btn"></button>
+          <p class="employees__data">14.12.2020 18:39</p>
+          <div class="employees__edit">
+            <button class="btn employees__btn employees__btn_edit_info"></button>
+            <button class="btn employees__btn employees__btn_edit_list"></button>
+          </div>
+        </li> 
       </ul>
- 
-      <button class="btn btn_style_primary">Добавить</button>
+      <div class="employees__sheet">
+        <button class="employees__sheet_btn employees__sheet_btn_prev"></button>
+        <p class="employees__sheet_number employees__sheet_number_active">1</p>
+        <p class="employees__sheet_number">2</p>
+        <p class="employees__sheet_number">3</p>
+        <p class="employees__sheet_number">4</p>
+        <p class="employees__sheet_number">5</p>
+        <p class="employees__sheet_number">6</p>
+        <button class="employees__sheet_btn employees__sheet_btn_next"></button>
+      </div>
+    </div>
 
   </section>
 </main>
