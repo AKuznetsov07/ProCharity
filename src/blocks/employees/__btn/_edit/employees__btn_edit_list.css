@@ -1,0 +1,7 @@
+.employees__btn_edit_list{
+	display: block;
+	background-image: url("../../../../images/employees-edit-list.svg");
+	width: 24px;
+	height: 24px;
+	margin-left: 12px;
+}

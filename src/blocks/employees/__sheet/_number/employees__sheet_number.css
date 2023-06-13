@@ -1,0 +1,14 @@
+.employees__sheet_number{
+	margin: 0;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+	text-align: center;
+	margin-left: 4px;
+}
+
+.employees__sheet_number:last-child{
+	margin-right: 4px;
+
+}

@@ -1,0 +1,6 @@
+.employees__name{
+	grid-area: name;
+	margin: 0;
+	padding: 0;
+	text-align: start;
+}

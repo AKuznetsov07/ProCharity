@@ -1,0 +1,6 @@
+.employees__btn_edit_info{
+	display: block;
+	background-image: url("../../../../images/employees-edit-info.svg");
+	width: 24px;
+	height: 24px;
+}
