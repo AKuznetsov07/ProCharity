@@ -1,7 +1,10 @@
 .employees__filter{
+	background-color: transparent;
+	border: none;
 	color: #7B878F;
 	margin: 0;
 	padding: 0;
+	cursor: pointer;
 }
 
 .employees__filter::after{
