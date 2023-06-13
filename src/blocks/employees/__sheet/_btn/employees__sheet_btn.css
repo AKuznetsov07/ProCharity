@@ -5,3 +5,11 @@ height: 24px;
 background-color: transparent;
 cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+	.employees__sheet_btn{
+		display: none;
+	}
+}
+
+
