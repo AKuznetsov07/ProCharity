@@ -396,7 +396,39 @@
 
 @import url(../blocks/telegram/__text/telegram__text.css);
 
+/*Блок аккаутна сотрудники*/
 
+@import url(../blocks/employees/employees.css);
+
+@import url(../blocks/employees/__btn/employees__btn.css);
+@import url(../blocks/employees/__btn/_admin/employees__btn_admin.css);
+@import url(../blocks/employees/__btn/_edit/employees__btn_edit_info.css);
+@import url(../blocks/employees/__btn/_edit/employees__btn_edit_list.css);
+
+@import url(../blocks/employees/__data/employees__data.css);
+
+@import url(../blocks/employees/__edit/employees__edit.css);
+
+@import url(../blocks/employees/__filter/employees__filter.css);
+@import url(../blocks/employees/__filter/employees__filter_active.css);
+@import url(../blocks/employees/__filter/_droplist/employees__filter_droplist.css);
+
+
+@import url(../blocks/employees/__grid/employees__grid.css);
+
+@import url(../blocks/employees/__list/employees__list.css);
+
+@import url(../blocks/employees/__name/employees__name.css);
+
+@import url(../blocks/employees/__rights/employees__rights.css);
+
+@import url(../blocks/employees/__sheet/employees__sheet.css);
+@import url(../blocks/employees/__sheet/_mobil/employees__sheet_mobil.css);
+@import url(../blocks/employees/__sheet/_btn/employees__sheet_btn.css);
+@import url(../blocks/employees/__sheet/_btn/_next/employees__sheet_btn_next.css);
+@import url(../blocks/employees/__sheet/_btn/_prev/employees__sheet_btn_prev.css);
+@import url(../blocks/employees/__sheet/_number/employees__sheet_number.css);
+@import url(../blocks/employees/__sheet/_number/_active/employees__sheet_number_active.css);
 
 /* Загрузчик файлов */
 

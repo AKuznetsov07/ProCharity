@@ -175,6 +175,11 @@ module.exports = {
             template: './src/account-password.html',
             inject: 'body'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'account-access.html',
+            template: './src/account-access.html',
+            inject: 'body'
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin()
     ]

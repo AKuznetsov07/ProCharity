@@ -1,0 +1,14 @@
+.employees__edit{
+	display: flex;
+	flex-direction: row;
+	grid-area: edit;
+	justify-self: end;
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+	.employees__edit{
+		display: none;
+	}
+}

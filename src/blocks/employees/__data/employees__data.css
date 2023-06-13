@@ -1,0 +1,12 @@
+.employees__data{
+	grid-area: data;
+	justify-self: center;
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+	.employees__data{
+		display: none;
+	}
+}

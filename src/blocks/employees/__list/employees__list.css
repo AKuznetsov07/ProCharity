@@ -1,0 +1,11 @@
+.employees__list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@media screen and (max-width: 900px) {
+	.employees__list{
+		margin-bottom: 16px;
+	}
+}

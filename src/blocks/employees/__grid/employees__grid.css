@@ -1,0 +1,32 @@
+.employees__grid{
+	display: grid;
+	grid-template-columns: 276px 93px 174px auto;
+	grid-template-rows: 44px;
+	grid-template-areas: "name rights data edit";
+	border-bottom: 1px solid #E3E9F0;
+	align-items: center;
+}
+
+
+@media screen and (max-width: 900px) {
+	.employees__grid{
+		grid-template-columns: 90% 10%;
+	}
+	.employees__grid:first-child{
+		grid-template-columns: 100%;
+		border-bottom: none;
+		grid-template-rows: 48px;
+		padding-top: 15px;
+		padding-bottom: 12px;
+	}	
+	.employees__grid:first-child::after{
+		content: "";
+		background-image: url('../../../images/arrow-employees-down.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-left: -36px;
+		display: block;
+		width: 24px;
+		height: 24px;
+	}
+}

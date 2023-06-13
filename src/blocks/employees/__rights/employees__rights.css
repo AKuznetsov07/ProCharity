@@ -1,0 +1,6 @@
+.employees__rights{
+	grid-area: rights;
+	justify-self: center;
+	margin: 0;
+	padding: 0;
+}
