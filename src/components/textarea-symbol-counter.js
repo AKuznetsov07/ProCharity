@@ -10,7 +10,9 @@ function count(e) {
 }
 
 export function handleTextareaSymbolCounter() {
-  document.querySelectorAll('.textarea__field').forEach((textarea) => {    
+  document.querySelectorAll('.textarea__field').forEach((textarea) => {      
+    if(!textarea.hasAttribute('maxlength')) return;
+    
     textarea.addEventListener('input', (evt) => count(evt));
     count(textarea);
   })
