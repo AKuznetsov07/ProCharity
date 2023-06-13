@@ -1,0 +1,8 @@
+.employees__grid{
+	display: grid;
+	grid-template-columns: 276px 93px 174px auto;
+	grid-template-rows: 44px;
+	grid-template-areas: "name rights data edit";
+	border-bottom: 1px solid #E3E9F0;
+	align-items: center;
+}

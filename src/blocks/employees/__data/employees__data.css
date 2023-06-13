@@ -1,0 +1,6 @@
+.employees__data{
+	grid-area: data;
+	justify-self: center;
+	margin: 0;
+	padding: 0;
+}
