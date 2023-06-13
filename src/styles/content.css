@@ -114,6 +114,14 @@
 
 @import url(../blocks/popup/_opened/popup_opened.css);
 
+@import url(../blocks/popup/__text/popup__text-icon-attention.css);
+
+@import url(../blocks/popup/__text/popup__text-icon.css);
+
+@import url(../blocks/popup/popup_position-two.css);
+
+@import url(../blocks/popup/popup_position-three.css);
+
 
 
 /* Заголовки */
