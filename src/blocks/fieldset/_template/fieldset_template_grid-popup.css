@@ -1,0 +1,8 @@
+.fieldset_template_grid-popup {
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: minmax(min-content,max-content);
+    grid-template-columns: 1fr;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}

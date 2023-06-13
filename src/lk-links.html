@@ -333,22 +333,22 @@
 </footer>
 <div class="popup popup_type_window popup_opened">
   <div class="popup__container">
-    <h2 class="popup__title">Новый сотрудник</h2>
+    <h2 class="popup__title heading_type_title">Новый сотрудник</h2>
     <form name="newUserForm" id="newUserForm" action="#" method="get">
-      <fieldset class="fieldset fieldset_template_grid-project-links">
-        <div class="checkbox">
-          <input type="checkbox" class="checkbox__input" name="notification-1" id="notification-1" checked>
-          <label for="notification-1" class="checkbox__label">Права администратора</label>
-          <button type="button" class="hint">
-            <div class="hint__tooltip hint__tooltip_position_right-bottom">
-              Сотрудник с правами администратора может:
-              <ul class="hint__tooltip_list">
+      <div class="checkbox">
+        <input type="checkbox" class="checkbox__input" name="notification-1" id="notification-1" checked>
+        <label for="notification-1" class="checkbox__label">Права администратора</label>
+        <button type="button" class="hint">
+            <div class="hint__tooltip hint__tooltip_position_center">
+            Сотрудник с правами администратора может:
+            <ul class="hint__tooltip_list">
                 <li class="hint__tooltip_list-item">добавлять коллег в личный кабинет НКО и удалять их оттуда,</li>
                 <li class="hint__tooltip_list-item">редактировать профиль организации.</li>
-              </ul>
+            </ul>
             </div>
-          </button>
-        </div>
+        </button>
+      </div>
+      <fieldset class="fieldset fieldset_template_grid-popup">
         <div class="input">
           <input type="text" placeholder="Имя" class="input__field input__field_default">
         </div>
