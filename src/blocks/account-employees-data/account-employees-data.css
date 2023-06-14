@@ -1,5 +1,6 @@
 .account-employees-data{
     display: flex;
-    margin: 0 auto;
+    margin: 0;
     padding-bottom: 32px;
+    padding-left: 24px;
 }
