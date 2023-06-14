@@ -153,6 +153,10 @@
 
 @import url(../blocks/btn/_position/btn_position_right.css);
 
+@import url(../blocks/btn/_style/btn_style_mobile.css);
+@import url(../blocks/btn/_style/btn_style_active.css);
+@import url(../blocks/btn/_style/btn_style_dark.css);
+
 
 
 /* Пользовательское отображение select */
