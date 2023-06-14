@@ -467,7 +467,17 @@
 
 @import url(../blocks/uploader/__note/uploader__note.css);
 
-
+@import url(../blocks/account/account.css);
+@import url(../blocks/account-employees/account-employees.css);
+@import url(../blocks/account-employees/__btn/account-employees__btn.css);
+@import url(../blocks/account-employees/__text/account-employees__text.css);
+@import url(../blocks/account-employees-info/account-employees-info.css);
+@import url(../blocks/account-employees-info/__name/account-employees-info__name.css);
+@import url(../blocks/account-employees-info/__wrench/account-employees-info__wrench.css);
+@import url(../blocks/account-employees-data/account-employees-data.css);
+@import url(../blocks/account-employees-data/__registration/account-employees-data__registration.css);
+@import url(../blocks/account-employees-data/__time/account-employees-data__time.css);
 
 /* CropperJS */
 @import url(../vendor/cropperjs.css);
+

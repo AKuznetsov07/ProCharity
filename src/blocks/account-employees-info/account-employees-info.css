@@ -1,0 +1,7 @@
+.account-employees-info {
+    display:flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 24px;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,8 @@
+.account-employees-info__wrench{
+    background-image:url(../../../images/Vector-settings.svg);
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
