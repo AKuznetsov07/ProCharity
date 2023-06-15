@@ -1,10 +1,10 @@
-.account-employees-data__time {
+.employees-info__block-time__registration{
     min-width: 152px;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    color: #374045;
+    color: #7B878F;
 }
