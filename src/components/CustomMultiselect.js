@@ -65,12 +65,20 @@ export default class CustomMultiselect {
       optionSelectedClass: 'custom-select__item_selected-checkbox',
       mobileScreenBreakpoint: 900,
       firstOptionIsTitle: false,
-      useTextSearch: true
+      useTextSearch: true,
+      counterField: false
   }) {
+
+/*Опция counterField создана спецально для мультиселекта с сетчиком.
+При стандартном значение создаются "чипсы" при true появляется поле с счечиком.
+Номер рядом с текстом 137.
+Слушатель клика имеет номер 987*/
+
     this._selectElement = document.querySelector(selector);
     this._options = options;
 
     this._handleSearch = this._handleSearch.bind(this);
+
   }
 
 
@@ -128,15 +136,18 @@ export default class CustomMultiselect {
     return element;
   }
 
-
   _createLabel() {
     // Создание подписи к полю
     const element = document.createElement('span');
     element.classList.add(
       ...this._handleClassList(this._options.labelClass)
     );
-
-    element.textContent = 'Выбрать';
+//139
+    if(this._options.counterField){
+      element.textContent = 'Виды деятельности: ' + this._fieldElement.children.length + ' из ' + this._getOptions().length;
+    }else {
+      element.textContent = 'Выбрать'; 
+    }
 
     return element;
   }
@@ -240,9 +251,14 @@ export default class CustomMultiselect {
 
   _createChipsContainer() {
     const element = document.createElement('div');
+    if(this._options.counterField){
+      element.style.display = 'none';
+    }
+
     element.classList.add(
       ...this._handleClassList(this._options.chipsClass)
     );
+    
 
     return element;
   }
@@ -253,7 +269,6 @@ export default class CustomMultiselect {
     element.classList.add(
       ...this._handleClassList(this._options.chipsTextClass)
     );
-
     return element;
   }
 
@@ -282,13 +297,16 @@ export default class CustomMultiselect {
     chipsDeleteBtn.setAttribute('data-val', item.dataset.val);
     chipsDeleteBtn.classList.add(this._options.chipsDeleteBtnClass);
 
-    this._labelElement.style.display = 'none';
+    if (!this._options.counterField) {
+      this._labelElement.style.display = 'none';
+    }
+
 
     chips.append(chipsText, chipsDeleteBtn);
 
+
     return chips;
   }
-
 
   _removeChips(val) {
     const chips = this._fieldElement.querySelector(`[data-val="${val}"]`);
@@ -385,6 +403,8 @@ export default class CustomMultiselect {
       //Результирующий массив
       const resultArray = [];
 
+
+
       array.forEach((item, index) => {
         // Обрабатываются только элементы optgroup и option,
         // в противном случае в результирующий массив попадут
@@ -410,7 +430,6 @@ export default class CustomMultiselect {
 
     const optgroups = this._selectElement.querySelectorAll('optgroup');
     const options = this._selectElement.querySelectorAll('option');
-
     // Если удалось найти внутри элемента select элементы optgroup
     if (optgroups && optgroups.length > 0) {
       //Передаем их в фукцию для рекурсивного получения данных
@@ -422,16 +441,19 @@ export default class CustomMultiselect {
 
 
   //Multi
-  _handleItemClick(evt) {
-    // Если элемент списка иммеет класс выбранного (отмеченного) элемента
+  _handleItemClick(evt) { 
+    // Если элемент списка иммеет класс выбранного (отмеченного) элемента    
+
     if (evt.target.classList.contains(this._options.optionSelectedClass)) {
       this._removeChips(evt.target.dataset.val);
     } else {
       this._fieldElement.append(this._createChips(evt.target));
     }
 
+
     // Переключение класса "выбранного" (отмеченного) элемента
     this._toggleSelectedOption(evt.target);
+
 
     // Изменение выбранных элементов в стандартном select
     this._changeOption(evt.target);
@@ -443,7 +465,6 @@ export default class CustomMultiselect {
 
   //Multi
   _handleParentItemClick(evt) {
-    console.log(window.innerWidth, this._options.mobileScreenBreakpoint, window.outerWidth < this._options.mobileScreenBreakpoint)
 
     if (window.innerWidth < this._options.mobileScreenBreakpoint) {
       evt.target.classList.toggle(this._options.optionParentOpenedClass);
@@ -567,9 +588,9 @@ export default class CustomMultiselect {
         );
       }
 
-
       // Установка отображаемого текстового значения
       option.textContent = item.text;
+
 
       // Если имеются дочерние элементы
       if (item.children.length > 0) {
@@ -594,7 +615,6 @@ export default class CustomMultiselect {
       parentElement.append(option);
     });
   }
-
 
   _toggleSelectedOption(option) {
     // Стилизация выбранного элемента списка
@@ -625,6 +645,7 @@ export default class CustomMultiselect {
         this._getOptions(),
         this._optionsListElement
       );
+
 
       //Установка обработчиков событий
       this.setEventListeners();
@@ -677,6 +698,7 @@ export default class CustomMultiselect {
 
 
   setEventListeners() {
+
     // Обработка текстового поиска по списку
     if (this._options.useTextSearch) {
       this._searchInputElement.addEventListener('input', this._handleSearch);
@@ -721,6 +743,7 @@ export default class CustomMultiselect {
         // В этом случае клик по пункту никак обработан не будет
         if (evt.target.dataset.isSelectable === 'true') {
           console.log(987)
+
           // Обработка клика по элементу
           this._handleItemClick(evt);
 
@@ -739,6 +762,9 @@ export default class CustomMultiselect {
           this._handleParentItemClick(evt);
         }
 
+        if(this._options.counterField){
+          this._labelElement.textContent = 'Виды деятельности: ' + (this._fieldElement.children.length - 2) + ' из ' + this._getOptions().length;
+        }
 
         // В остальных случаях
       } else {
