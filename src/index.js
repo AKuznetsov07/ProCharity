@@ -157,9 +157,9 @@ new CustomMultiselect('#registration-description-choose-type', {
   closeBtnClass: ['btn', 'btn_type_close', 'custom-select__btn-close'],
   fieldClass: ['custom-select__field', 'custom-select__field_style_multiselect'],
   labelClass: 'custom-select__label',
-  chipsClass: 'custom-select__chips',//*************************************
-  chipsTextClass: 'custom-select__chips-text',//*************************************
-  chipsDeleteBtnClass: ['btn', 'custom-select__chips-delete-btn'],//*************************************
+  chipsClass: 'custom-select__chips',
+  chipsTextClass: 'custom-select__chips-text',
+  chipsDeleteBtnClass: ['btn', 'custom-select__chips-delete-btn'],
   searchInputClass: 'custom-select__input',
   messageContainerClass: 'custom-select__message',
   modalClass: 'custom-select__modal',
