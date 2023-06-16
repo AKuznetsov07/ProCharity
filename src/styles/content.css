@@ -140,6 +140,7 @@
 /* Кнопки */
 
 @import url(../blocks/btn/btn.css);
+@import url(../blocks/btn/_style/btn_style_mobile.css);
 
 @import url(../blocks/btn/_style/btn_style_primary.css);
 @import url(../blocks/btn/_style/btn_style_secondary.css);
@@ -152,6 +153,10 @@
 @import url(../blocks/btn/_type/btn_type_add.css);
 
 @import url(../blocks/btn/_position/btn_position_right.css);
+
+
+@import url(../blocks/btn/_style/btn_style_active.css);
+@import url(../blocks/btn/_color/btn_color_dark.css);
 
 
 
@@ -471,7 +476,17 @@
 
 @import url(../blocks/uploader/__note/uploader__note.css);
 
-
+@import url(../blocks/account/account.css);
+@import url(../blocks/employees-info/__block-data/employees-info__block-data.css);
+@import url(../blocks/employees-info/__block-data__name/employees-info__block-data__name.css);
+@import url(../blocks/employees-info/__block-data__wrench/employees-info__block-data__wrench.css);
+@import url(../blocks/employees-info/__block-time/employees-info__block-time.css);
+@import url(../blocks/employees-info/__block-time__registration/employees-info__block-time__registration.css);
+@import url(../blocks/employees-info/__block-time__data/employees-info__block-time__data.css);
+@import url(../blocks/account-employees/account-employees.css);
+@import url(../blocks/account-employees/__btn/account-employees__btn.css);
+@import url(../blocks/account-employees/__text/account-employees__text.css);
 
 /* CropperJS */
 @import url(../vendor/cropperjs.css);
+
