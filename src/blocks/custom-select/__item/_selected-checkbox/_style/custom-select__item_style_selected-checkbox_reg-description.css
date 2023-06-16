@@ -1,0 +1,7 @@
+.custom-select__item_style_selected-checkbox_reg-description{
+  background-image: url(../../../../../images/checkbox-checked.svg);
+}
+
+.custom-select__item_style_selected-checkbox_reg-description:hover {
+  background: url(../../../../../images/checkbox-checked-hover.svg) no-repeat 8px center #f5f6f8;
+}
