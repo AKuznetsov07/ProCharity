@@ -160,6 +160,7 @@
 @import url(../blocks/custom-select/__list/_style/custom-select__list_style_registration-description.css);
 
 @import url(../blocks/custom-select/__list-container/custom-select__list-container.css);
+@import url(../blocks/custom-select/__list-container/_style/custom-select__list-container_style_registration-description.css);
 @import url(../blocks/custom-select/__list-container/_opened/custom-select__list-container__opened.css);
 
 @import url(../blocks/custom-select/__message/custom-select__message.css);
@@ -170,6 +171,9 @@
 
 @import url(../blocks/custom-select/__item/custom-select__item.css);
 @import url(../blocks/custom-select/__item/_style/custom-select__item_style_parent.css);
+@import url(../blocks/custom-select/__item/_style/custom-select__item_style_reg-description.css);
+@import url(../blocks/custom-select/__item/_style/custom-select__item_style_checkbox_reg-description.css);
+@import url(../blocks/custom-select/__item/_selected-checkbox/_style/custom-select__item_style_selected-checkbox_reg-description.css);
 @import url(../blocks/custom-select/__item/_style/custom-select__item_style_parent-opened.css);
 @import url(../blocks/custom-select/__item/_style/custom-select__item_style_checkbox.css);
 @import url(../blocks/custom-select/__item/_selected/custom-select__item_selected.css);

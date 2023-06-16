@@ -1,7 +1,7 @@
 import {logPlugin} from "@babel/preset-env/lib/debug";
 
 export default class CustomMultiselect {
-  /**
+  /*
    *
    * @param selector - слектор элемента select, который необходимо кастомизировать
    * @param options - объект параметров
@@ -35,6 +35,7 @@ export default class CustomMultiselect {
    *                                    использоваться в качестве подписи поля и не будет выводиться
    *                                    в кастомизированном списке
    *    useTextSearch                   - true | false - использовать / не использовать текстовый поиск по элементам списка
+   *    counterField                    - Опция для  мультиселекта с сетчиком. При true появляется поле с счечиком.                                   
    */
   constructor(
     selector,
@@ -68,11 +69,6 @@ export default class CustomMultiselect {
       useTextSearch: true,
       counterField: false
   }) {
-
-/*Опция counterField создана спецально для мультиселекта с сетчиком.
-При стандартном значение создаются "чипсы" при true появляется поле с счечиком.
-Номер рядом с текстом 137.
-Слушатель клика имеет номер 987*/
 
     this._selectElement = document.querySelector(selector);
     this._options = options;
@@ -136,13 +132,14 @@ export default class CustomMultiselect {
     return element;
   }
 
+
   _createLabel() {
     // Создание подписи к полю
     const element = document.createElement('span');
     element.classList.add(
       ...this._handleClassList(this._options.labelClass)
     );
-//139
+
     if(this._options.counterField){
       element.textContent = 'Виды деятельности: ' + this._fieldElement.children.length + ' из ' + this._getOptions().length;
     }else {
@@ -259,7 +256,6 @@ export default class CustomMultiselect {
       ...this._handleClassList(this._options.chipsClass)
     );
     
-
     return element;
   }
 
@@ -377,14 +373,19 @@ export default class CustomMultiselect {
     // Создание кнопки сброса выбора
     this._resetBtnElement = this._createResetBtn();
 
-
-    this._optionsListContainerElement.append(
-      this._headingElement,
-      this._closeBtnElement,
-      this._optionsListElement,
-      this._selectBtnElement,
-      this._resetBtnElement
-    );
+    if (this._options.counterField) {
+      this._optionsListContainerElement.append(
+        this._optionsListElement,
+      );
+    }else {
+      this._optionsListContainerElement.append(
+        this._headingElement,
+        this._closeBtnElement,
+        this._optionsListElement,
+        this._selectBtnElement,
+        this._resetBtnElement
+      )
+    };
 
     this._optionsListContainerElement.classList.add(
       this._options.modalClass
@@ -402,8 +403,6 @@ export default class CustomMultiselect {
     function createDataArray(array) {
       //Результирующий массив
       const resultArray = [];
-
-
 
       array.forEach((item, index) => {
         // Обрабатываются только элементы optgroup и option,

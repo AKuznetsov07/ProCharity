@@ -3,7 +3,7 @@
 }
 
 .custom-select__item_selected-checkbox:hover {
-  background-image: url(../../../../images/checkbox-checked-hover.svg);
+  background: url(../../../../images/checkbox-checked-hover.svg) no-repeat 8px center #f5f6f8;
 }
 
 @media screen and (max-width: 900px) {
