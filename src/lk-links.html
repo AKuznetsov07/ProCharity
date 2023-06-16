@@ -336,7 +336,7 @@
     <h2 class="popup__title heading_type_title">Новый сотрудник</h2>
     <form name="newUserForm" id="newUserForm" action="#" method="get">
       <div class="checkbox">
-        <input type="checkbox" class="checkbox__input" name="notification-1" id="notification-1" checked>
+        <input type="checkbox" class="checkbox__input" name="adminAccess" id="adminAccess" checked>
         <label for="notification-1" class="checkbox__label">Права администратора</label>
         <button type="button" class="hint">
             <div class="hint__tooltip hint__tooltip_position_center">
@@ -348,7 +348,7 @@
             </div>
         </button>
       </div>
-      <fieldset class="fieldset fieldset_template_grid-popup">
+      <fieldset class="fieldset fieldset_template_grid-one-col-popup fieldset_template_grid-one-col">
         <div class="input">
           <input type="text" placeholder="Имя" class="input__field input__field_default">
           <button class="btn input__btn input__btn_type_clear-text"></button>
@@ -374,7 +374,7 @@
     <h2 class="popup__title heading_type_title">Данные сотрудника</h2>
     <form name="editUserData" id="editUserData" action="#" method="get">
       <div class="checkbox">
-        <input type="checkbox" class="checkbox__input" name="notification-1" id="notification-1">
+        <input type="checkbox" class="checkbox__input" name="adminAccess" id="adminAccess">
         <label for="notification-1" class="checkbox__label">Права администратора</label>
         <button type="button" class="hint">
             <div class="hint__tooltip hint__tooltip_position_center">
@@ -386,7 +386,7 @@
             </div>
         </button>
       </div>
-      <fieldset class="fieldset fieldset_template_grid-popup">
+      <fieldset class="fieldset fieldset_template_grid-one-col-popup fieldset_template_grid-one-col">
         <div class="input">
           <input type="text" placeholder="Имя" class="input__field input__field_default">
           <button class="btn input__btn input__btn_type_clear-text"></button>
@@ -407,6 +407,28 @@
     <button class="btn btn_type_close popup__btn-close"></button>
   </div>
 </div>
+<div class="popup popup_type_window popup_opened">
+  <div class="popup__container">
+    <h2 class="popup__title heading_type_title">Выберите фрагмент изображения</h2>
+    <div class="popup__cropper-container">
+      <img class="popup__image" src="" alt="Твой аватар">
+    </div>
+    <p class="paragraph popup__paragraph">Так будет выглядеть на сайте</p>
+    <ul class="avatar__preview-container">
+      <li class="avatar__preview-item avatar__preview-item_size_large">
+        <img src="" alt="" class="avatar__preview-image avatar__preview-image_size_large">
+      </li>
+      <li class="avatar__preview-item">
+        <img src="" alt="" class="avatar__preview-image avatar__preview-image_size_medium">
+      </li>
+      <li class="avatar__preview-item">
+        <img src="" alt="" class="avatar__preview-image avatar__preview-image_size_small">
+      </li>
+    </ul>
+    <button type="submit" class="btn btn_style_primary btn_confirm">Сохранить</button>
+    <button class="btn btn_type_close popup__btn-close"></button>
+  </div>
+</div>
 <div class="popup popup_type_window">
   <div class="popup__container">
     <h2 class="popup__title">Сбросить пароль сотрудника?</h2>
@@ -419,7 +441,7 @@
     <button class="btn btn_type_close popup__btn-close"></button>
   </div>
 </div>
-<div class="popup popup_type_window popup_opened">
+<div class="popup popup_type_window">
   <div class="popup__container">
     <h2 class="popup__title heading_type_title">Удалить данные сотрудника?</h2>
     <form name="deleteUserData" id="deleteUserData" action="#" method="get">
