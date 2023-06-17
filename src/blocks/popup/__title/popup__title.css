@@ -4,7 +4,10 @@
 }
 
 .popup_type_window .popup__title {
+  font-size: 32px;
+  color: #374045;
   padding-bottom: 20px;
+  font-weight: 400;
 }
 
 .popup_type_message .popup__title {
@@ -22,4 +25,10 @@
   left: 0;
   position: absolute;
   top: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .popup_type_window .popup__title {
+    font-weight: 700;
+  }
 }
