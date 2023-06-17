@@ -140,6 +140,7 @@
 /* Кнопки */
 
 @import url(../blocks/btn/btn.css);
+@import url(../blocks/btn/_style/btn_style_mobile.css);
 
 @import url(../blocks/btn/_style/btn_style_primary.css);
 @import url(../blocks/btn/_style/btn_style_secondary.css);
@@ -152,6 +153,10 @@
 @import url(../blocks/btn/_type/btn_type_add.css);
 
 @import url(../blocks/btn/_position/btn_position_right.css);
+
+
+@import url(../blocks/btn/_style/btn_style_active.css);
+@import url(../blocks/btn/_color/btn_color_dark.css);
 
 
 
@@ -168,6 +173,7 @@
 @import url(../blocks/custom-select/__list/_style/custom-select__list_style_registration-description.css);
 
 @import url(../blocks/custom-select/__list-container/custom-select__list-container.css);
+@import url(../blocks/custom-select/__list-container/_style/custom-select__list-container_style_registration-description.css);
 @import url(../blocks/custom-select/__list-container/_opened/custom-select__list-container__opened.css);
 
 @import url(../blocks/custom-select/__message/custom-select__message.css);
@@ -178,6 +184,9 @@
 
 @import url(../blocks/custom-select/__item/custom-select__item.css);
 @import url(../blocks/custom-select/__item/_style/custom-select__item_style_parent.css);
+@import url(../blocks/custom-select/__item/_style/custom-select__item_style_reg-description.css);
+@import url(../blocks/custom-select/__item/_style/custom-select__item_style_checkbox_reg-description.css);
+@import url(../blocks/custom-select/__item/_selected-checkbox/_style/custom-select__item_style_selected-checkbox_reg-description.css);
 @import url(../blocks/custom-select/__item/_style/custom-select__item_style_parent-opened.css);
 @import url(../blocks/custom-select/__item/_style/custom-select__item_style_checkbox.css);
 @import url(../blocks/custom-select/__item/_selected/custom-select__item_selected.css);
@@ -471,7 +480,17 @@
 
 @import url(../blocks/uploader/__note/uploader__note.css);
 
-
+@import url(../blocks/account/account.css);
+@import url(../blocks/employees-info/__block-data/employees-info__block-data.css);
+@import url(../blocks/employees-info/__block-data__name/employees-info__block-data__name.css);
+@import url(../blocks/employees-info/__block-data__wrench/employees-info__block-data__wrench.css);
+@import url(../blocks/employees-info/__block-time/employees-info__block-time.css);
+@import url(../blocks/employees-info/__block-time__registration/employees-info__block-time__registration.css);
+@import url(../blocks/employees-info/__block-time__data/employees-info__block-time__data.css);
+@import url(../blocks/account-employees/account-employees.css);
+@import url(../blocks/account-employees/__btn/account-employees__btn.css);
+@import url(../blocks/account-employees/__text/account-employees__text.css);
 
 /* CropperJS */
 @import url(../vendor/cropperjs.css);
+
