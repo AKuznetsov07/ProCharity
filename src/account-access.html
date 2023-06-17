@@ -91,7 +91,7 @@
   <section class="content">
 
     <h1 class="heading heading_type_title heading_type_access">Сотрудники</h1>
-    <p class="paragraph">Приглашайте сотрудников, чтобы они могли размещать задания от имени вашей НКО.</p> 
+    <p class="paragraph">Приглашайте сотрудников, чтобы они могли размещать задания от имени вашей НКО.</p>
     <button class="btn btn_style_primary">Добавить</button>
 
     <div class="employees">
@@ -119,7 +119,7 @@
             <button class="btn employees__btn employees__btn_edit_info"></button>
             <button class="btn employees__btn employees__btn_edit_list"></button>
           </div>
-        </li>    
+        </li>
         <li class="employees__grid">
           <p class="employees__name">Новоселова Алевтина</p>
           <button class="employees__rights btn employees__btn"></button>
@@ -128,7 +128,7 @@
             <button class="btn employees__btn employees__btn_edit_info"></button>
             <button class="btn employees__btn employees__btn_edit_list"></button>
           </div>
-        </li> 
+        </li>
         <li class="employees__grid">
           <p class="employees__name">Щедрина-Вольфембюттельская Мария</p>
           <button class="employees__rights btn employees__btn employees__btn_admin"></button>
@@ -146,7 +146,7 @@
             <button class="btn employees__btn employees__btn_edit_info"></button>
             <button class="btn employees__btn employees__btn_edit_list"></button>
           </div>
-        </li> 
+        </li>
       </ul>
 
       <div class="employees__sheet">
@@ -367,8 +367,8 @@
     <h2 class="popup__title heading_type_title">Новый сотрудник</h2>
     <form name="newUserForm" id="newUserForm" action="#" method="get">
       <div class="checkbox">
-        <input type="checkbox" class="checkbox__input" name="adminAccess" id="adminAccess" checked>
-        <label for="notification-1" class="checkbox__label">Права администратора</label>
+        <input type="checkbox" class="checkbox__input" name="addAdminAccess" id="addAdminAccess" checked>
+        <label for="addAdminAccess" class="checkbox__label">Права администратора</label>
         <button type="button" class="hint">
             <div class="hint__tooltip hint__tooltip_position_center">
             Сотрудник с правами администратора может:
@@ -381,15 +381,18 @@
       </div>
       <fieldset class="fieldset fieldset_template_grid-one-col-popup fieldset_template_grid-one-col">
         <div class="input">
-          <input type="text" placeholder="Имя" class="input__field input__field_default">
+          <input type="text" name="userName" placeholder="Имя" class="input__field input__field_default">
+          <label class="input__label" for="userName">Имя</label>
           <button class="btn input__btn input__btn_type_clear-text"></button>
         </div>
         <div class="input">
-          <input type="text" placeholder="Фамилия" class="input__field input__field_default">
+          <input type="text" name="userLastname" placeholder="Фамилия" class="input__field input__field_default">
+          <label class="input__label" for="userLastname">Фамилия</label>
           <button class="btn input__btn input__btn_type_clear-text"></button>
         </div>
         <div class="input">
-          <input type="email" placeholder="Электронная почта" class="input__field input__field_default">
+          <input type="email" name="userMail" placeholder="Электронная почта" class="input__field input__field_default">
+          <label class="input__label" for="userMail">Электронная почта</label>
           <button class="btn input__btn input__btn_type_clear-text"></button>
         </div>
       </fieldset>
@@ -401,13 +404,13 @@
   </div>
 </div>
 
-<div class="popup popup_type_window">
+<div class="popup popup_type_window popup_opened">
   <div class="popup__container">
     <h2 class="popup__title heading_type_title">Данные сотрудника</h2>
     <form name="editUserData" id="editUserData" action="#" method="get">
       <div class="checkbox">
-        <input type="checkbox" class="checkbox__input" name="adminAccess" id="adminAccess">
-        <label for="notification-1" class="checkbox__label">Права администратора</label>
+        <input type="checkbox" class="checkbox__input" name="editAdminAccess" id="editAdminAccess">
+        <label for="editAdminAccess" class="checkbox__label">Права администратора</label>
         <button type="button" class="hint">
             <div class="hint__tooltip hint__tooltip_position_center">
             Сотрудник с правами администратора может:
@@ -420,15 +423,18 @@
       </div>
       <fieldset class="fieldset fieldset_template_grid-one-col-popup fieldset_template_grid-one-col">
         <div class="input">
-          <input type="text" placeholder="Имя" class="input__field input__field_default">
+          <input type="text" name="userName" placeholder="Имя" class="input__field input__field_default">
+          <label class="input__label" for="userName">Имя</label>
           <button class="btn input__btn input__btn_type_clear-text"></button>
         </div>
         <div class="input">
-          <input type="text" placeholder="Фамилия" class="input__field input__field_default">
+          <input type="text" name="userLastname" placeholder="Фамилия" class="input__field input__field_default">
+          <label class="input__label" for="userLastname">Фамилия</label>
           <button class="btn input__btn input__btn_type_clear-text"></button>
         </div>
         <div class="input">
-          <input type="email" placeholder="Электронная почта" class="input__field input__field_default">
+          <input type="email" name="userMail" placeholder="Электронная почта" class="input__field input__field_default">
+          <label class="input__label" for="userMail">Электронная почта</label>
           <button class="btn input__btn input__btn_type_clear-text"></button>
         </div>
       </fieldset>
