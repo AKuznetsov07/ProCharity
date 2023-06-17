@@ -277,6 +277,7 @@
 @import url(../blocks/input/__field/_default/input__field_default.css);
 @import url(../blocks/input/__field/_type/input__field_type_calendar.css);
 @import url(../blocks/input/__field/_type/input__field_type_password.css);
+@import url(../blocks/input/_margin-padding/input_margin-padding.css);
 @import url(../blocks/input/__field/_right-padding/input__field_right-padding_one.css);
 @import url(../blocks/input/__field/_right-padding/input__field_right-padding_two.css);
 
