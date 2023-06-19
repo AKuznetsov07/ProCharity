@@ -2,8 +2,6 @@
   max-width: 352px;
   position: relative;
   display: none;
-  /* right: 24px;
-  top: 24px; */
 }
 
 @media screen and (max-width: 450px) {

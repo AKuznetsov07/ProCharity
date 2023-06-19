@@ -14,7 +14,7 @@ import MobileMenu from "./components/MobileMenu";
 import CustomSelect from "./components/CustomSelect";
 import CustomMultiselect from "./components/CustomMultiselect";
 import Popup from './components/Popup';
-
+import { PopupManager } from './components/PopupManager';
 
 // Подключение сторонних библиотек
 import 'cropperjs';
@@ -51,8 +51,29 @@ if (personalDataForm) {
   })
 }
 
-const popup = new Popup('.popup');
-popup.setEventListeners();
+// Создаем систему управления попапами
+const popupManager = new PopupManager(popupElements);
+
+// Находим все попапы на странице
+const popupElements = document.querySelectorAll('.popup');
+
+popupElements.forEach((popupElement) => {
+  const popup = new Popup(popupElement);
+  popup.setEventListeners();
+  // Добавляем попап в коллекцию в менеджер
+  popupManager.addPopup(popupElement.getAttribute('id'), {popupElement, popup});
+})
+
+// Функция подписки кнопок на попапы по id
+function subscribeButton(btnElement, popupId) {
+  btnElement.addEventListener('click', () => {
+    popupManager.open(popupId);
+  })
+}
+
+const newEmployeBtn = document.querySelector('#btn_newEmploye');
+subscribeButton(newEmployeBtn, 'newEmploye');
+
 
 // Обеспечение работы модальных окон
 if (avatarContainer) {
