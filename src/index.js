@@ -61,14 +61,16 @@ popupElements.forEach((popupElement) => {
   const popup = new Popup(popupElement);
   popup.setEventListeners();
   // Добавляем попап в коллекцию в менеджер
-  popupManager.addPopup(popupElement.getAttribute('id'), {popupElement, popup});
+  popupManager.addPopup(popup.getPopupId(), popup);
 })
 
 // Функция подписки кнопок на попапы по id
 function subscribeButton(btnElement, popupId) {
-  btnElement.addEventListener('click', () => {
-    popupManager.open(popupId);
-  })
+  if(btnElement != null) {
+    btnElement.addEventListener('click', () => {
+      popupManager.open(popupId);
+    })
+  }
 }
 
 const newEmployeBtn = document.querySelector('#btn_newEmploye');
@@ -80,7 +82,7 @@ if (avatarContainer) {
   avatarContainer.addEventListener('mousedown', () => {
     // Открываем popup только в том случае, если в контейнере лежит элемент изображения
     if (avatarContainer.querySelector('.avatar__img')) {
-      popup.open();
+      popupManager.open('avatarPopup');
     }
   });
 }
@@ -98,7 +100,7 @@ if (image) {
   const avatar = new Avatar({
     imgChangeHandler: (url) => {
       // Открытие модального окна для редактирования аватара
-      popup.open();
+      popupManager.open('avatarPopup');
 
       // Замена url в случае повторной загрузки другого аватара
       cropper.replace(url)
