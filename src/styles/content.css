@@ -97,6 +97,7 @@
 
 @import url(../blocks/popup/_type/popup_type_message.css);
 @import url(../blocks/popup/_type/popup_type_window.css);
+@import url(../blocks/popup/_type/popup_type_menu.css);
 
 @import url(../blocks/popup/__container/popup__container.css);
 
@@ -428,7 +429,6 @@
 @import url(../blocks/employees/__menu/employees__menu.css);
 @import url(../blocks/employees/__menu/_link/employees__menu_link.css);
 @import url(../blocks//employees/__menu/_link/_delete/employees__menu_link_delete.css);
-@import url(../blocks/employees/__menu/_opened/employees__menu_opened.css);
 
 @import url(../blocks/employees/__data/employees__data.css);
 

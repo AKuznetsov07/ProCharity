@@ -1,0 +1,7 @@
+.popup_type_menu {
+    visibility: hidden;
+    z-index: 1000;
+    position: absolute;
+    top: 41px;
+    right: -199px;
+}
