@@ -39,22 +39,20 @@ export class PopupManager {
     open(id) {
         const popup = this._popupCollection.get(id);
         if (popup) {
-            console.log('id: ' + id);
+            
             // Проверяем если попап уже открыт и он не типа message, то закрываем его
             if (this._activePopupId != '' && popup.getPopupType() != 'message') {
                 this.closeActiveWindow();
             }
-            console.log('open');
+            
             popup.open();
             this._activePopupId = id;
         }
     }
-
-    // ---!!!---   В данный момент это не выполняется, потому что попап закрывается напрямую с экземпляра попапа
+    
     close(id) {
         let popup = this._popupCollection.get(id)
-        if (popup) {
-            console.log('close');
+        if (popup) {            
             popup.close();
             this._activePopupId = '';
         }

@@ -68,12 +68,13 @@ subscribeButton(newEmployeBtn, 'newEmploye');
 
 
 // Обеспечение работы модальных окон
-if (avatarContainer) {
-  avatarContainer.addEventListener('mousedown', () => {
+if (avatarContainer) {  
+  avatarContainer.addEventListener('mousedown', () => {    
     // Открываем popup только в том случае, если в контейнере лежит элемент изображения
-    if (avatarContainer.querySelector('.avatar__img')) {
+    if (avatarContainer.querySelector('.avatar__img')) {      
       popupManager.open('avatarPopup');
     }
+    
   });
 }
 
@@ -91,7 +92,7 @@ if (image) {
     imgChangeHandler: (url) => {
       // Открытие модального окна для редактирования аватара
       popupManager.open('avatarPopup');
-
+      
       // Замена url в случае повторной загрузки другого аватара
       cropper.replace(url)
     },
@@ -103,7 +104,7 @@ if (image) {
       );
     },
     confirmHandler: () => {
-      popup.close();
+      popupManager.close('avatarPopup');
     }
   });
   avatar.init();
