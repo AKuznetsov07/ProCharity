@@ -92,7 +92,7 @@
 
     <h1 class="heading heading_type_title heading_type_access">Сотрудники</h1>
     <p class="paragraph">Приглашайте сотрудников, чтобы они могли размещать задания от имени вашей НКО.</p>
-    <button class="btn btn_style_primary">Добавить</button>
+    <button class="btn btn_style_primary" id="btn_newEmploye">Добавить</button>
 
     <div class="employees">
 
@@ -335,34 +335,38 @@
   </div>
 </footer>
 
-<div class="popup popup_type_message popup_opened">
-  <div class="popup__container">
-    <p style="margin: 0;"></p>
-    <p class="popup__text popup__text-icon">Приглашение и пароль для входа
-      в личный кабинет отправили на электронную почту
-      <a href="#" class="popup__link-mail">usermail@.ru</a>
-    </p>
-    <button class="btn btn_type_close popup__btn-close"></button>
+<div class="popup__message-container">
+  <div class="popup popup_type_message popup_opened"  id="invite">
+    <div class="popup__container">
+      <p style="margin: 0;"></p>
+      <p class="popup__text popup__text-icon">Приглашение и пароль для входа
+        в личный кабинет отправили на электронную почту
+        <a href="#" class="popup__link-mail">usermail@.ru</a>
+      </p>
+      <button class="btn btn_type_close popup__btn-close"></button>
+    </div>
+  </div>
+
+
+  <div class="popup popup_type_message popup_opened" id="employeError">
+    <div class="popup__container">
+      <p class="popup__text popup__text-icon-attention">Не удалось добавить сотрудника</p>
+      <p class="popup__text">Обновите страницу или попробуйте позже</p>
+      <button class="btn btn_type_close popup__btn-close"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_type_message popup_opened" id="employeAdd">
+    <div class="popup__container">
+      <p class="popup__text popup__text-icon">Яблочкина Виктория</p>
+      <p class="popup__text">Данные пользователя успешно удалены</p>
+      <button class="btn btn_type_close popup__btn-close"></button>
+    </div>
   </div>
 </div>
 
-<div class="popup popup_type_message popup_opened popup_position-two ">
-  <div class="popup__container">
-    <p class="popup__text popup__text-icon-attention">Не удалось добавить сотрудника</p>
-    <p class="popup__text">Обновите страницу или попробуйте позже</p>
-    <button class="btn btn_type_close popup__btn-close"></button>
-  </div>
-</div>
 
-<div class="popup popup_type_message popup_opened popup_position-three ">
-  <div class="popup__container">
-    <p class="popup__text popup__text-icon">Яблочкина Виктория</p>
-    <p class="popup__text">Данные пользователя успешно удалены</p>
-    <button class="btn btn_type_close popup__btn-close"></button>
-  </div>
-</div>
-
-<div class="popup popup_type_window">
+<div class="popup popup_type_window" id="newEmploye">
   <div class="popup__container">
     <h2 class="popup__title heading_type_title">Новый сотрудник</h2>
     <form name="newUserForm" id="newUserForm" action="#" method="get">
@@ -404,7 +408,7 @@
   </div>
 </div>
 
-<div class="popup popup_type_window popup_opened">
+<div class="popup popup_type_window" id="employeData">
   <div class="popup__container">
     <h2 class="popup__title heading_type_title">Данные сотрудника</h2>
     <form name="editUserData" id="editUserData" action="#" method="get">
@@ -446,7 +450,7 @@
   </div>
 </div>
 
-<div class="popup popup_type_window">
+<div class="popup popup_type_window" id="resetPassword">
   <div class="popup__container">
     <h2 class="popup__title">Сбросить пароль сотрудника?</h2>
     <form name="resetUserPassword" id="resetUserPassword" action="#" method="get">
@@ -459,7 +463,7 @@
   </div>
 </div>
 
-<div class="popup popup_type_window">
+<div class="popup popup_type_window" id="deleteEmploye">
   <div class="popup__container">
     <h2 class="popup__title heading_type_title">Удалить данные сотрудника?</h2>
     <form name="deleteUserData" id="deleteUserData" action="#" method="get">

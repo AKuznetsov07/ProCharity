@@ -13,8 +13,7 @@ import MobileMenu from "./components/MobileMenu";
 
 import CustomSelect from "./components/CustomSelect";
 import CustomMultiselect from "./components/CustomMultiselect";
-import Popup from './components/Popup';
-
+import { PopupManager } from './components/Popups/PopupManager';
 
 // Подключение сторонних библиотек
 import 'cropperjs';
@@ -51,16 +50,31 @@ if (personalDataForm) {
   })
 }
 
-const popup = new Popup('.popup');
-popup.setEventListeners();
+// Создаем систему управления попапами
+const popupManager = new PopupManager();
+
+
+// Функция подписки кнопок на попапы по id
+function subscribeButton(btnElement, popupId) {
+  if(btnElement != null) {
+    btnElement.addEventListener('click', () => {
+      popupManager.open(popupId);
+    })
+  }
+}
+
+const newEmployeBtn = document.querySelector('#btn_newEmploye');
+subscribeButton(newEmployeBtn, 'newEmploye');
+
 
 // Обеспечение работы модальных окон
-if (avatarContainer) {
-  avatarContainer.addEventListener('mousedown', () => {
+if (avatarContainer) {  
+  avatarContainer.addEventListener('mousedown', () => {    
     // Открываем popup только в том случае, если в контейнере лежит элемент изображения
-    if (avatarContainer.querySelector('.avatar__img')) {
-      popup.open();
+    if (avatarContainer.querySelector('.avatar__img')) {      
+      popupManager.open('avatarPopup');
     }
+    
   });
 }
 
@@ -77,8 +91,8 @@ if (image) {
   const avatar = new Avatar({
     imgChangeHandler: (url) => {
       // Открытие модального окна для редактирования аватара
-      popup.open();
-
+      popupManager.open('avatarPopup');
+      
       // Замена url в случае повторной загрузки другого аватара
       cropper.replace(url)
     },
@@ -90,7 +104,7 @@ if (image) {
       );
     },
     confirmHandler: () => {
-      popup.close();
+      popupManager.close('avatarPopup');
     }
   });
   avatar.init();
