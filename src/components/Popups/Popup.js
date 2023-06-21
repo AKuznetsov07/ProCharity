@@ -26,7 +26,9 @@ export class Popup {
     }
 
     configurePopup(configuration) {
-        this._closeFunc = configuration.closeFunc;
+        if (configuration.closeFunc) {
+            this._closeFunc = configuration.closeFunc;
+        }
     }
 
     setEventListeners() {

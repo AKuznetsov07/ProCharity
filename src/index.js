@@ -67,6 +67,7 @@ const newEmployeBtn = document.querySelector('#btn_newEmploye');
 subscribeButton(newEmployeBtn, 'newEmploye');
 
 
+
 // Обеспечение работы модальных окон
 if (avatarContainer) {  
   avatarContainer.addEventListener('mousedown', () => {    
@@ -195,3 +196,20 @@ new CustomMultiselect('#registration-description-choose-type', {
   useTextSearch: true,
   counterField: true
 }).generate();
+
+
+
+const emploeeContextBtns = document.querySelectorAll('.employees__btn_edit_list');
+emploeeContextBtns.forEach((btnNode) => {
+    btnNode.addEventListener('click', (evt) => {
+        let btnRect = btnNode.getBoundingClientRect();
+        let configuration = {
+            x: evt.pageX,
+            y: evt.pageY
+            //x: btnRect.left,
+            //y: btnRect.top
+        }
+        popupManager.configurePopupById('emploeeContext', configuration);
+        popupManager.open('emploeeContext');
+    })
+})

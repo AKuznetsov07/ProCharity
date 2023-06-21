@@ -20,7 +20,7 @@ export class PopupFactory {
         else if (popupClassList.contains("popup_type_message")) {
             return new MessagePopup(node);
         }
-        else if (popupClassList.contains("Context")) {///TODO:
+        else if (popupClassList.contains("popup_type_menu")) {
             return new ContextPopup(node);
         }
         else {

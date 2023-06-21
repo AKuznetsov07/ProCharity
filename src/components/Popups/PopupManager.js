@@ -38,6 +38,7 @@ export class PopupManager {
 
     open(id) {
         const popup = this._popupCollection.get(id);
+
         if (popup) {
             if (popup.getPopupType() == 'message') {
                 popup.open();
