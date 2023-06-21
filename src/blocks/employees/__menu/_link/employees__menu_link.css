@@ -1,4 +1,5 @@
 .employees__menu_link {
+    cursor: pointer;
     display: block;
     padding: 8px 12px;
     text-decoration: none;
