@@ -1,13 +1,12 @@
-import Popup from './Popup';
+import { Popup } from './Popup';
 export class ContextPopup extends Popup {
 
-    constructor() {
-        super();
+    constructor(node) {
+        super(node);
+        this._type = 'context';
+        this.setEventListeners(); 
     }
 
-    getPopupType() {
-        return 'context';
-    }
     configurePopup(configuration) {
         super.closePopup(configuration);
         // действия кнопок контекста

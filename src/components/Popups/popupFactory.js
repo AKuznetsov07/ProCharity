@@ -1,7 +1,7 @@
-import Popup from './Popup';
-import FormPopup from './Popup';
-import MessagePopup from './Popup';
-import ContextPopup from './Popup';
+import { Popup } from './Popup';
+import { FormPopup } from './FormPopup';
+import { MessagePopup } from './MessagePopup';
+import { ContextPopup } from './ContextPopup';
 
 export class PopupFactory {
     constructor () {

@@ -39,14 +39,17 @@ export class PopupManager {
     open(id) {
         const popup = this._popupCollection.get(id);
         if (popup) {
-            
-            // Проверяем если попап уже открыт и он не типа message, то закрываем его
-            if (this._activePopupId != '' && popup.getPopupType() != 'message') {
-                this.closeActiveWindow();
+            if (popup.getPopupType() == 'message') {
+                popup.open();
             }
-            
-            popup.open();
-            this._activePopupId = id;
+            else {
+                // Проверяем если попап уже открыт и он не типа message, то закрываем его
+                if (this._activePopupId != '') {
+                    this.closeActiveWindow();
+                }
+                popup.open();
+                this._activePopupId = id;
+            }
         }
     }
     

@@ -1,8 +1,8 @@
-export default class Popup {
+export class Popup {
     constructor(popup) {
-    this._popup = popup;
+        this._type = 'default';
+        this._popup = popup;
         this._closeFunc = this.close;
-        this.setEventListeners(); 
     }
 
     open() {
@@ -22,7 +22,7 @@ export default class Popup {
     }
 
     getPopupType() {
-        return 'default';
+        return this._type;
     }
 
     configurePopup(configuration) {
@@ -34,6 +34,11 @@ export default class Popup {
             this._closeButton = this._popup.querySelector('.popup__btn-close');
 
             this._closeButton.addEventListener('click', () => { this.closePopup() })
+            this._popup.addEventListener("mousedown", (evt) => {
+                if (evt.target === evt.currentTarget) {
+                    this.closePopup();
+                }
+            })
         }
     }
 }

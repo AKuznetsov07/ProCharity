@@ -1,15 +1,20 @@
-import Popup from './components/Popup';
+import { Popup } from './Popup';
 export class FormPopup extends Popup {
 
-    constructor() {
-        super();
+    constructor(node) {
+        super(node);
+        this._type = 'form';
+        this.setEventListeners(); 
+
+        this._submitFunc = this._closeFunc;
     }
 
-    getPopupType() {
-        return 'form';
+    submitPopup() {
+        this._submitFunc();
     }
     configurePopup(configuration) {
         super.closePopup(configuration);
         //Сабмит, содержимое инпутов
+        this._submitFunc = configuration.submitFunc;
     }
 }
