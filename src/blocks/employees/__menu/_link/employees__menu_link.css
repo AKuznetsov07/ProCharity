@@ -1,0 +1,14 @@
+.employees__menu_link {
+    cursor: pointer;
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #374045;
+    font-weight: 400;
+}
+
+.employees__menu_link:hover {
+    background: #F5F6F8;
+}
