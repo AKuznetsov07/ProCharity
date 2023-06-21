@@ -1,0 +1,15 @@
+.popup__message-container {
+    position: fixed;
+    width: 352px;
+    top: 24px;
+    right: 24px;    
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media screen and (max-width: 450px) {
+    .popup__message-container {
+        width: 360px;
+    }
+  }

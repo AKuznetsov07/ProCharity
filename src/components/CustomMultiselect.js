@@ -741,7 +741,6 @@ export default class CustomMultiselect {
         // присутствовать элементы optgroup, не имеющие вложенных элементов option
         // В этом случае клик по пункту никак обработан не будет
         if (evt.target.dataset.isSelectable === 'true') {
-          console.log(987)
 
           // Обработка клика по элементу
           this._handleItemClick(evt);
@@ -757,7 +756,6 @@ export default class CustomMultiselect {
         } else {
           // Перед открытием вложенного списка скрываются все ранее открытые элементы
           this._closeOtherItems();
-          console.log('parent')
           this._handleParentItemClick(evt);
         }
 
