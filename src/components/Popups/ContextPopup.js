@@ -4,12 +4,13 @@ export class ContextPopup extends Popup {
     constructor(node) {
         super(node);
         this._type = 'context';
-        this.setEventListeners(); 
+        //this.setEventListeners();
+        this._bindObject = null;
     }
 
     configurePopup(configuration) {
         super.configurePopup(configuration);
-        // действия кнопок контекста
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         let nodeRect = this._popup.getBoundingClientRect();
 
         //TODO:fix autocount
@@ -28,13 +29,39 @@ export class ContextPopup extends Popup {
             this._popup.style.top = `${configuration.y}px`;
         }
     }
-    setEventListeners() {
-        if (this._popup) {///TODO:
-            //this._popup.addEventListener("mousedown", (evt) => {
-            //    if (evt.target === evt.currentTarget) {
+
+    setEventListeners(evt) {                  
+            if (evt.target.parentNode.parentNode.classList.contains('employees__menu') === false) {             
+             const page = document.querySelector('.page');             
+             page.removeEventListener("mousedown", this._bindObject);
+             this.closePopup();             
+            }
+        
+        
+        // if (this._popup) {///TODO:
+        //     const page = document.querySelector('.page');
+        //     page.addEventListener("mousedown", (evt) => {                
+        //        if (evt.target.parentNode.parentNode.classList.contains('employees__menu') === false) {
+        //         console.log('into')
+        //            this.closePopup();
+        //        }
+        //     })
+        // }
+    }
+    
+    open() {
+        super.open();
+        
+        this._bindObject = this.setEventListeners.bind(this);
+
+        const page = document.querySelector('.page');
+        page.addEventListener("mousedown", this._bindObject)
+       
+            // page.addEventListener("mousedown", (evt) => {                
+            //    if (evt.target.parentNode.parentNode.classList.contains('employees__menu') === false) {
+            //     console.log('into')
             //        this.closePopup();
             //    }
-            //})
-        }
+            // })            
     }
 }
