@@ -8,7 +8,7 @@ export class MessagePopup extends Popup {
 
     configurePopup(configuration) {
         super.configurePopup(configuration);
-        //»конка, заголовок, текст
+        //set message text, title, ico
     }
 
     close() {

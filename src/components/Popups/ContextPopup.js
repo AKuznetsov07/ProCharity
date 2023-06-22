@@ -10,7 +10,7 @@ export class ContextPopup extends Popup {
 
     configurePopup(configuration) {
         super.configurePopup(configuration);
-        // �������� ������ ���������
+        // context button funcs also here
         let nodeRect = this._popup.getBoundingClientRect();
 
         //TODO:fix autocount
@@ -36,17 +36,6 @@ export class ContextPopup extends Popup {
              page.removeEventListener("mousedown", this._bindObject);
              this.closePopup();             
             }
-        
-        
-        // if (this._popup) {///TODO:
-        //     const page = document.querySelector('.page');
-        //     page.addEventListener("mousedown", (evt) => {                
-        //        if (evt.target.parentNode.parentNode.classList.contains('employees__menu') === false) {
-        //         console.log('into')
-        //            this.closePopup();
-        //        }
-        //     })
-        // }
     }
     
     open() {
@@ -56,12 +45,5 @@ export class ContextPopup extends Popup {
 
         const page = document.querySelector('.page');
         page.addEventListener("mousedown", this._bindObject)
-       
-            // page.addEventListener("mousedown", (evt) => {                
-            //    if (evt.target.parentNode.parentNode.classList.contains('employees__menu') === false) {
-            //     console.log('into')
-            //        this.closePopup();
-            //    }
-            // })            
     }
 }

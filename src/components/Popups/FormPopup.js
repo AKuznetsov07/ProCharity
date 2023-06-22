@@ -14,7 +14,7 @@ export class FormPopup extends Popup {
     }
     configurePopup(configuration) {
         super.closePopup(configuration);
-        //Сабмит, содержимое инпутов
+        //submit func, inputs data
         this._submitFunc = configuration.submitFunc;
     }
 }
