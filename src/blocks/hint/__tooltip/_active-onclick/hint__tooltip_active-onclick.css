@@ -1,4 +1,4 @@
-.hint__tooltip {
+.hint__tooltip_active-onclick {
   background: #FFFFFF;
   border-radius: 8px;
   bottom: 30px;
@@ -22,7 +22,7 @@
   z-index: 2;
 }
 
-.hint__tooltip::after {
+.hint__tooltip_active-onclick::after {
   border: solid 8px transparent;
   border-top-color: #fff;
   bottom: -16px;
@@ -32,13 +32,13 @@
   right: 16px;
 }
 
-.hint:hover > .hint__tooltip {
+.hint:active > .hint__tooltip_active-onclick {
   display: block;
 }
 
 
 @media screen and (max-width: 900px) {
-  .hint__tooltip {
+  .hint__tooltip_active-onclick {
     min-width: 312px;
   }
 }

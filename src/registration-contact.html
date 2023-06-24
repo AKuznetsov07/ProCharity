@@ -96,7 +96,7 @@
   </section>
   <section class="content">
     <h1 class="heading heading_type_title">Контактное лицо</h1>
-    <form name="newVolunteer" id="newVolunteer" action="registration-confim-email.html" method="get" novalidate>
+<form name="newVolunteer" id="newVolunteer" action="registration-confim-email.html" method="get"> 
       <fieldset class="fieldset fieldset_template_grid-form">
         <legend class="paragraph">Волонтеры увидят эти данные на странице НКО и в ваших заданиях</legend>
         <div class="input">
@@ -127,7 +127,7 @@
           <label for="email" class="input__label">Электронная почта</label>
           <button class="btn input__btn input__btn_type_clear-text input__btn_position_first"></button>
           <button type="button" class="hint input__btn input__btn_type_hint">
-            <div class="hint__tooltip">
+            <div class="hint__tooltip_active-onclick">
                 По возможности укажите основную электронную почту фонда — на случай, если ваша перестанет быть актуальной
             </div>
           </button>
@@ -137,7 +137,7 @@
           <label for="tgname" class="input__label">Ник в Telegram без @ и ссылки</label>
           <button class="btn input__btn input__btn_type_clear-text input__btn_position_first"></button>
           <button type="button" class="hint input__btn input__btn_type_hint">
-            <div class="hint__tooltip">
+            <div class="hint__tooltip_active-onclick">
                 Личный идентификатор в Telegram. Его можно найти в настройках внутри мессенджера.
             </div>
           </button>
@@ -165,9 +165,7 @@
           <button class="btn input__btn input__btn_type_show-pwd"></button>
         </div>
       </fieldset>
-      <fieldset class="fieldset fieldset_template_grid-form fieldset_style_p-none">
         <button type="submit" class="btn btn_style_primary btn_position_left">Зарегистрироваться</button>
-      </fieldset>
     </form>
   </section>
 </main>
