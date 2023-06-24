@@ -226,7 +226,6 @@
 
 @import url(../blocks/hint/hint.css);
 
-@import url(../blocks/hint/__tooltip/_active-onclick/hint__tooltip_active-onclick.css);
 @import url(../blocks/hint/__tooltip/hint__tooltip.css);
 @import url(../blocks/hint/__tooltip/_position/hint__tooltip_position_right-bottom.css);
 @import url(../blocks/hint/__tooltip/_position/hint_tooltip_position_center.css);
