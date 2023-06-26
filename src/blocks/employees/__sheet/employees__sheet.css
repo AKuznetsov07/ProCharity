@@ -1,0 +1,13 @@
+.employees__sheet{
+	display: flex;
+	flex-direction: row;
+	height: 44px;
+	align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+	.employees__sheet{
+		width: 90vw;
+		height: 56px;
+	}
+}

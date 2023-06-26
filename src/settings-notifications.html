@@ -61,14 +61,14 @@
   <section class="sidebar-nav">
     <ul class="sidebar-nav__list">
       <li class="sidebar-nav__item sidebar-nav__item_type_current">
-        <div class="sidebar-nav__step sidebar-nav__step_style_lk sidebar-nav__step_type_current">
+        <div class="sidebar-nav__step sidebar-nav__step_type_current">
           <span class="sidebar-nav__step-text">1</span>
         </div>
         <span class="sidebar-nav__item-text">Уведомления</span>
       </li>
       <li class="sidebar-nav__item">
         <a href="#" class="sidebar-nav__link">
-          <div class="sidebar-nav__step sidebar-nav__step_style_lk">
+          <div class="sidebar-nav__step sidebar-nav__step_type_filled">
             <span class="sidebar-nav__step-text">2</span>
           </div>
           <span class="sidebar-nav__item-text">Профиль</span>
@@ -76,7 +76,7 @@
       </li>
       <li class="sidebar-nav__item">
         <a href="#" class="sidebar-nav__link">
-          <div class="sidebar-nav__step sidebar-nav__step_style_lk">
+          <div class="sidebar-nav__step sidebar-nav__step_type_filled">
             <span class="sidebar-nav__step-text">3</span>
           </div>
           <span class="sidebar-nav__item-text">Смена пароля</span>
@@ -94,7 +94,7 @@
   <section class="content">
     <h1 class="heading heading_type_title">Уведомления</h1>
     <form name="notifications" id="notifications">
-      <fieldset class="fieldset fieldset_template_grid-one-col">
+      <fieldset class="fieldset fieldset_template_grid-single-column">
         <legend class="paragraph">Отметь, какие оповещения ты хотел бы получать на электронную почту:</legend>
         <div class="fieldset__row-group">
           <div class="checkbox">
@@ -103,7 +103,7 @@
               заданиям</label>
             <button type="button" class="hint">
               <div class="hint__tooltip hint__tooltip_position_right-bottom">
-                Мы будем присылать на электронную почту все важные уведомления по твоим заданиям
+                Мы будем присылать на электронную почту все важные уведомления по твоим заданиям
               </div>
             </button>
           </div>
@@ -122,14 +122,14 @@
         </div>
         <div class="checkbox">
           <input type="checkbox" class="checkbox__input" name="notification-4" id="notification-4">
-          <label for="notification-4" class="checkbox__label">новые задания по моим компетенциям (по мере
+          <label for="notification-4" class="checkbox__label">новые задания по моим компетенциям (по мере
             появления)</label>
         </div>
       </fieldset>
-      <fieldset class="fieldset fieldset_template_grid-one-col">
+      <fieldset class="fieldset fieldset_template_grid-single-column">
         <div class="telegram">
-          <p class="telegram__text">Получай уведомления о новых заданиях от бота ProCharity в Telegram. При этом
-            рекомендуем отключить уведомления на электронную почту.</p>
+          <p class="telegram__text">Получай уведомления о новых заданиях от бота ProCharity в Telegram. При этом
+            рекомендуем отключить уведомления на электронную почту.</p>
           <a href="#" class="btn btn_style_telegram">Подключить</a>
         </div>
       </fieldset>

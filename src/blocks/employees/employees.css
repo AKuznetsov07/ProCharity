@@ -1,0 +1,17 @@
+.employees{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #374045;
+	margin-top: 32px;
+	width: 737px;
+}
+
+@media screen and (max-width: 900px) {
+	.employees{
+		width:90vw;
+		margin-top: 16px;
+		border-top: 1px solid #E3E9F0;
+	}
+}

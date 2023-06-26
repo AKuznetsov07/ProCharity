@@ -32,9 +32,10 @@
   right: 16px;
 }
 
-.hint:hover > .hint__tooltip {
-  display: block;
+.hint:active > .hint__tooltip {
+    display: block;
 }
+
 
 @media screen and (max-width: 900px) {
   .hint__tooltip {

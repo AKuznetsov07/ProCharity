@@ -27,11 +27,15 @@
 
 ## Макет
 
-[Ссылка на макет](https://www.notion.so/Procharity-21-f24c880905844ce883efd18a0f39472d)
+[Ссылка на макет](https://www.figma.com/file/8FKHIxAgoDSkHRRMWeCxvm/)
+
 
 ## Ссылка на бриф
 
-[Ссылка на бриф](https://www.notion.so/Procharity-21-f24c880905844ce883efd18a0f39472d)
+
+[Ссылка на бриф](https://www.notion.so/42b98e55ab5041bfa5c426c5b9aca3be?v=eb489e0e63964ab5a3230b36c2c6d44f)
+
+[Альтернативная ссылка на бриф](https://bright-caper-264.notion.site/23-Procharity-434ab5d9b1b14b5fbec6005e34c3c237)
 
 ## Примечания для интеграции
 

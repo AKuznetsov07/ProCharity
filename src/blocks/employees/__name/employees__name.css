@@ -1,0 +1,12 @@
+.employees__name{
+	grid-area: name;
+	margin: 0;
+	padding: 0;
+	text-align: start;
+}
+
+@media screen and (max-width: 900px) {
+	.employees__name {
+		cursor: pointer;
+	}
+}

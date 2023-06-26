@@ -60,7 +60,7 @@
     <ul class="sidebar-nav__list">
       <li class="sidebar-nav__item">
         <a href="#" class="sidebar-nav__link">
-          <div class="sidebar-nav__step sidebar-nav__step_style_lk">
+          <div class="sidebar-nav__step sidebar-nav__step_type_filled">
             <span class="sidebar-nav__step-text">1</span>
           </div>
           <span class="sidebar-nav__item-text">Личные данные</span>
@@ -68,7 +68,7 @@
       </li>
       <li class="sidebar-nav__item">
         <a href="#" class="sidebar-nav__link">
-          <div class="sidebar-nav__step sidebar-nav__step_style_lk">
+          <div class="sidebar-nav__step sidebar-nav__step_type_filled">
             <span class="sidebar-nav__step-text">2</span>
           </div>
           <span class="sidebar-nav__item-text">Компетенции</span>
@@ -76,21 +76,21 @@
       </li>
       <li class="sidebar-nav__item">
         <a href="#" class="sidebar-nav__link">
-          <div class="sidebar-nav__step sidebar-nav__step_style_lk">
+          <div class="sidebar-nav__step sidebar-nav__step_type_filled">
             <span class="sidebar-nav__step-text">3</span>
           </div>
           <span class="sidebar-nav__item-text">Мотивация</span>
         </a>
       </li>
       <li class="sidebar-nav__item sidebar-nav__item_type_current">
-        <div class="sidebar-nav__step sidebar-nav__step_style_lk sidebar-nav__step_type_current">
+        <div class="sidebar-nav__step sidebar-nav__step_type_current">
           <span class="sidebar-nav__step-text">4</span>
         </div>
         <span class="sidebar-nav__item-text">Портфолио</span>
       </li>
       <li class="sidebar-nav__item">
         <a href="#" class="sidebar-nav__link">
-          <div class="sidebar-nav__step sidebar-nav__step_style_lk">
+          <div class="sidebar-nav__step sidebar-nav__step_type_filled">
             <span class="sidebar-nav__step-text">5</span>
           </div>
           <span class="sidebar-nav__item-text">Социальные сети</span>
@@ -120,7 +120,7 @@
     <h1 class="heading heading_type_title">Мое портфолио</h1>
     <p class="paragraph">Наличие резюме или портфолио увеличит доверие к тебе как к профессионалу</p>
     <form id="uploadProjects" name="uploadProjects" enctype="multipart/form-data" class="uploader" method="get">
-      <fieldset class="fieldset fieldset_style_pb-small fieldset_template_grid-one-col">
+      <fieldset class="fieldset fieldset_style_pb-small fieldset_template_grid-single-column">
         <legend class="heading heading_type_subtitle">Резюме или примеры работ</legend>
         <div class="uploader__input-container">
           <input accept=".jpg, .png, .tiff" class="uploader__input" type="file" name="projects" id="projects" multiple>
@@ -130,7 +130,7 @@
         </div>
         <p class="note uploader__note">Jpg, png, pdf объемом не более 20 Мб</p>
       </fieldset>
-      <fieldset class="fieldset fieldset_template_grid-one-col fieldset_style_pb-small">
+      <fieldset class="fieldset fieldset_template_grid-single-column fieldset_style_pb-small">
         <ul class="uploader__files-list">
           <li class="uploader__item">
             <div class="uploader__file-preview-container uploader__file-preview-container_loading"></div>
@@ -158,7 +158,7 @@
       </fieldset>
     </form>
     <form id="uploadCertificates" name="uploadCertificates" enctype="multipart/form-data" class="uploader" method="get">
-      <fieldset class="fieldset fieldset_style_pb-small fieldset_template_grid-one-col">
+      <fieldset class="fieldset fieldset_style_pb-small fieldset_template_grid-single-column">
         <legend class="heading heading_type_subtitle">Дипломы и сертификаты</legend>
         <div class="uploader__input-container">
           <input accept=".jpg, .png, .tiff" class="uploader__input" type="file" name="projects" id="certificates"
@@ -178,7 +178,7 @@
             <input class="input__field input__field_default" type="text" placeholder="Текст ссылки">
           </div>
           <div class="input input_type_bottom-interval">
-            <input class="input__field input__field_default" type="url" placeholder="https://">
+            <input class="input__field input__field_right-padding_one input__field_default" type="url" placeholder="https://">
             <button class="btn input__btn input__btn_type_clear-text"></button>
           </div>
         </div>

@@ -1,0 +1,11 @@
+.employees__menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    min-width: 222px;
+    margin: 0;
+    padding: 8px 0;
+    background: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 77, 95, 0.24);
+    border-radius: 8px;
+}

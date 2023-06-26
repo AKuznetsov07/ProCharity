@@ -13,8 +13,7 @@ import MobileMenu from "./components/MobileMenu";
 
 import CustomSelect from "./components/CustomSelect";
 import CustomMultiselect from "./components/CustomMultiselect";
-import Popup from './components/Popup';
-
+import { PopupManager } from './components/Popups/PopupManager';
 
 // Подключение сторонних библиотек
 import 'cropperjs';
@@ -51,16 +50,32 @@ if (personalDataForm) {
   })
 }
 
-const popup = new Popup('.popup');
-popup.setEventListeners();
+// Создаем систему управления попапами
+const popupManager = new PopupManager();
+
+
+// Функция подписки кнопок на попапы по id
+function subscribeButton(btnElement, popupId) {
+  if(btnElement != null) {
+    btnElement.addEventListener('click', () => {
+      popupManager.open(popupId);
+    })
+  }
+}
+
+const newEmployeBtn = document.querySelector('#btn_newEmploye');
+subscribeButton(newEmployeBtn, 'newEmploye');
+
+
 
 // Обеспечение работы модальных окон
-if (avatarContainer) {
-  avatarContainer.addEventListener('mousedown', () => {
+if (avatarContainer) {  
+  avatarContainer.addEventListener('mousedown', () => {    
     // Открываем popup только в том случае, если в контейнере лежит элемент изображения
-    if (avatarContainer.querySelector('.avatar__img')) {
-      popup.open();
+    if (avatarContainer.querySelector('.avatar__img')) {      
+      popupManager.open('avatarPopup');
     }
+    
   });
 }
 
@@ -77,8 +92,8 @@ if (image) {
   const avatar = new Avatar({
     imgChangeHandler: (url) => {
       // Открытие модального окна для редактирования аватара
-      popup.open();
-
+      popupManager.open('avatarPopup');
+      
       // Замена url в случае повторной загрузки другого аватара
       cropper.replace(url)
     },
@@ -90,7 +105,7 @@ if (image) {
       );
     },
     confirmHandler: () => {
-      popup.close();
+      popupManager.close('avatarPopup');
     }
   });
   avatar.init();
@@ -148,3 +163,53 @@ new MobileMenu({
   menuContainerClass: 'header__nav',
   menuContainerOpenedClass: 'header__nav_opened'
 }).setEventListeners();
+
+// экземпляр кастом-селекта для registration-description
+
+new CustomMultiselect('#registration-description-choose-type', {
+  wrapClass: ['custom-select__wrap', 'custom-select__wrap_style_multiselect'],
+  headingClass: ['heading', 'heading__title', 'custom-select__heading'],
+  closeBtnClass: ['btn', 'btn_type_close', 'custom-select__btn-close'],
+  fieldClass: ['custom-select__field', 'custom-select__field_style_multiselect'],
+  labelClass: 'custom-select__label',
+  chipsClass: 'custom-select__chips',
+  chipsTextClass: 'custom-select__chips-text',
+  chipsDeleteBtnClass: ['btn', 'custom-select__chips-delete-btn'],
+  searchInputClass: 'custom-select__input',
+  messageContainerClass: 'custom-select__message',
+  modalClass: 'custom-select__modal',
+  optionsListContainerClass: 'custom-select__list-container_style_registration-description',
+  optionsOpenedListContainerClass: 'custom-select__list-container__opened',
+  linkClass: 'custom-select__link',
+  selectAllGroupLinkClass: 'custom-select__link_type_select-all',
+  resetAllGroupLinkClass: 'custom-select__link_type_reset',
+  selectBtnClass: ['btn', 'btn_style_primary', 'custom-select__btn', 'custom-select__btn_type_select'],
+  resetBtnClass: ['btn', 'btn_style_secondary', 'custom-select__btn', 'custom-select__btn_type_reset'],
+  optionsListClass: [ 'custom-select__list_style_registration-description'],
+  optionClass: 'custom-select__item_style_reg-description',
+  optionParentClass: 'custom-select__item_style_parent',
+  optionParentOpenedClass: 'custom-select__item_style_parent-opened',
+  optionSelectableClass: 'custom-select__item_style_checkbox_reg-description',
+  optionSelectedClass: 'custom-select__item_style_selected-checkbox_reg-description',
+  mobileScreenBreakpoint: 900,
+  firstOptionIsTitle: false,
+  useTextSearch: true,
+  counterField: true
+}).generate();
+
+
+
+const emploeeContextBtns = document.querySelectorAll('.employees__btn_edit_list');
+emploeeContextBtns.forEach((btnNode) => {
+    btnNode.addEventListener('click', (evt) => {
+        let btnRect = btnNode.getBoundingClientRect();
+        let configuration = {
+            x: evt.pageX,
+            y: evt.pageY
+            //x: btnRect.left,
+            //y: btnRect.top
+        }
+        popupManager.configurePopupById('emploeeContext', configuration);
+        popupManager.open('emploeeContext');
+    })
+})

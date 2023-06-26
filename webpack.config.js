@@ -46,6 +46,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+          filename: 'lk-account-description.html',
+          template: './src/lk-account-description.html',
+          inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+          filename: 'registration-description.html',
+          template: './src/registration-description.html',
+          inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'ui-kit.html',
             template: './src/ui-kit.html',
             inject: 'body'
@@ -53,6 +63,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'lk-account-contacts.html',
+            template: './src/lk-account-contacts.html',
             inject: 'body'
         }),
         new HtmlWebpackPlugin({
@@ -81,8 +96,23 @@ module.exports = {
             inject: 'body'
         }),
         new HtmlWebpackPlugin({
+            filename: 'lk-links.html',
+            template: './src/lk-links.html',
+            inject: 'body'
+        }),
+         new HtmlWebpackPlugin({
+            filename: 'lk-donations.html',
+            template: './src/lk-donations.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'registration.html',
             template: './src/registration.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration-contact.html',
+            template: './src/registration-contact.html',
             inject: 'body'
         }),
         new HtmlWebpackPlugin({
@@ -91,8 +121,23 @@ module.exports = {
             inject: 'body'
         }),
         new HtmlWebpackPlugin({
+            filename: 'registration-confim-email.html',
+            template: './src/registration-confim-email.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'registration-new-volunteer.html',
             template: './src/registration-new-volunteer.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration-links.html',
+            template: './src/registration-links.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration-final.html',
+            template: './src/registration-final.html',
             inject: 'body'
         }),
         new HtmlWebpackPlugin({
@@ -108,6 +153,41 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'settings-profile.html',
             template: './src/settings-profile.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration-documents.html',
+            template: './src/registration-documents.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'account-documents.html',
+            template: './src/account-documents.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration-legal.html',
+            template: './src/registration-legal.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'lk-legal.html',
+            template: './src/lk-legal.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'account-password.html',
+            template: './src/account-password.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'account-access.html',
+            template: './src/account-access.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'account-access-list-item.html',
+            template: './src/account-access-list-item.html',
             inject: 'body'
         }),
         new CleanWebpackPlugin(),

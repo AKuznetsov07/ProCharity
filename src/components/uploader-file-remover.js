@@ -7,9 +7,15 @@ function handleFileListClick(evt) {
 }
 
 export function setFilesRemover() {
-  const filesList = document.querySelector('.uploader__files-list');
 
-  if (filesList) {
-    filesList.addEventListener('mousedown', handleFileListClick);
-  }
+    const filesLists = document.querySelectorAll('.uploader__files-list');
+
+    if (filesLists.length > 0) {
+
+        filesLists.forEach(element => {
+
+            element.addEventListener('mousedown', handleFileListClick);
+
+        });
+    }
 }
