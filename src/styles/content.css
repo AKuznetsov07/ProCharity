@@ -420,7 +420,7 @@
 @import url(../blocks/employees/employees.css);
 
 @import url(../blocks/employees/__btn/employees__btn.css);
-@import url(../blocks/employees/__btn/_admin/employees__btn_admin.css);
+@import url(../blocks/employees/__btn/_admin/employees__btn_admin_wrench.css);
 @import url(../blocks/employees/__btn/_edit/employees__btn_edit_info.css);
 @import url(../blocks/employees/__btn/_edit/employees__btn_edit_list.css);
 @import url(../blocks/employees/__menu/employees__menu.css);
@@ -445,7 +445,7 @@
 @import url(../blocks/employees/__rights/employees__rights.css);
 
 @import url(../blocks/employees/__sheet/employees__sheet.css);
-@import url(../blocks/employees/__sheet/_mobil/employees__sheet_mobil.css);
+@import url(../blocks/employees/__sheet/_mobil/employees__sheet_mobil_text.css);
 @import url(../blocks/employees/__sheet/_btn/employees__sheet_btn.css);
 @import url(../blocks/employees/__sheet/_btn/_next/employees__sheet_btn_next.css);
 @import url(../blocks/employees/__sheet/_btn/_prev/employees__sheet_btn_prev.css);
@@ -483,11 +483,11 @@
 
 @import url(../blocks/account/account.css);
 @import url(../blocks/employees-info/__block-data/employees-info__block-data.css);
-@import url(../blocks/employees-info/__block-data__name/employees-info__block-data__name.css);
-@import url(../blocks/employees-info/__block-data__wrench/employees-info__block-data__wrench.css);
+@import url(../blocks/employees-info/__block-data-name/employees-info__block-data-name.css);
+@import url(../blocks/employees-info/__block-data-wrench/employees-info__block-data-wrench.css);
 @import url(../blocks/employees-info/__block-time/employees-info__block-time.css);
-@import url(../blocks/employees-info/__block-time__registration/employees-info__block-time__registration.css);
-@import url(../blocks/employees-info/__block-time__data/employees-info__block-time__data.css);
+@import url(../blocks/employees-info/__block-time-registration/employees-info__block-time-registration.css);
+@import url(../blocks/employees-info/__block-time-data/employees-info__block-time-data.css);
 @import url(../blocks/account-employees/account-employees.css);
 @import url(../blocks/account-employees/__btn/account-employees__btn.css);
 @import url(../blocks/account-employees/__text/account-employees__text.css);
