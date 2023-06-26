@@ -242,9 +242,9 @@
 
 @import url(../blocks/fieldset/_template/fieldset_template_grid-form.css);
 @import url(../blocks/fieldset/_template/fieldset_template_grid-project-links.css);
-@import url(../blocks/fieldset/_template/fieldset_template_grid-column.css);
+@import url(../blocks/fieldset/_template/fieldset_template_grid-single-column.css);
 @import url(../blocks/fieldset/_template/fieldset_template_grid-social-links.css);
-@import url(../blocks/fieldset/_template/fieldset_template_grid-column-popup.css);
+@import url(../blocks/fieldset/_template/fieldset_template_grid-single-column-popup.css);
 
 @import url(../blocks/fieldset/_style/fieldset_style_pb-small.css);
 @import url(../blocks/fieldset/_style/fieldset_style_p-none.css);

@@ -1,4 +1,4 @@
-.fieldset_template_grid-column {
+.fieldset_template_grid-single-column {
   display: grid;
   grid-auto-rows: minmax(min-content, max-content);
   grid-template-columns: 1fr;
